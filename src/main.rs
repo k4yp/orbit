@@ -43,7 +43,6 @@ fn main() {
         radius: 6371,
     };
     let mut tick = 0;
-    let mut elapsed = 0;
 
     loop {
         let start = Instant::now();
@@ -59,6 +58,7 @@ fn main() {
             println!("SUN: {} EARTH: {}", sun.rotation, earth.rotation);
             tick = 0;
         }
+
         sleep(Duration::from_millis(1));
 
         let elapsed = start.elapsed().as_micros();
